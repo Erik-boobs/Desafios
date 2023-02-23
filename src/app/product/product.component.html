@@ -1,0 +1,26 @@
+<h2>Products</h2>
+
+
+
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <p-dialog header="Title" [(visible)]="display">
+    <img src="../../assets/phones/{{product.images}}" width="100px" height="100px" alt="Sin imagen">  
+</p-dialog>
+
+<button  class="btn btn-light"  type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">Details</button>
+
+<button class="btn btn-light" type="button" (click)="share()">Share</button>
+
+  <app-product-alerts
+  [product]="product" 
+  (notify)="onNotify()">
+</app-product-alerts>
