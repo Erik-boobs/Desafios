@@ -1,14 +1,17 @@
 [
   {
-    "type": "Overnight",
-    "price": 25.99
+    "name": "iPhone 11",
+    "price": 499,
+    "description": "iPhone11 con 128GB de almacenamiento y 8GB de RAM"
   },
   {
-    "type": "2-Day",
-    "price": 9.99
+    "name": "iPhone12",
+    "price": 599,
+    "description": "iPhone12 con 128GB de almacenamiento y 8GB de RAM"
   },
   {
-    "type": "Postal",
-    "price": 2.99
+    "name": "Samsung Galaxy S22",
+    "price": 799,
+    "description": "Samsung Galaxy S22 con 256GB de almacenamiento y 8GB de RAM"
   }
 ]

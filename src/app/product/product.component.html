@@ -12,8 +12,10 @@
     Description: {{ product.description }}
   </p>
 
+  <button class="btn btn-light" type="button" (click)="addToCart(product)">Buy</button>
+
   <p-dialog header="Title" [(visible)]="display">
-    <img src="../../assets/phones/{{product.images}}" width="100px" height="100px" alt="Sin imagen">  
+    <img src="../../assets/phones/{{product.images}}" width="400px" height="400px" alt="Sin imagen">  
 </p-dialog>
 
 <button  class="btn btn-light"  type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">Details</button>

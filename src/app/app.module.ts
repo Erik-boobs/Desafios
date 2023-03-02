@@ -10,16 +10,22 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductComponent } from './product/product.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DialogModule} from 'primeng/dialog';
+import { CartComponent } from './cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShippingComponent } from './shipping/shipping.component';
 
 
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     DialogModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      { path: 'cart', component: CartComponent},
+      { path: 'shipping', component: ShippingComponent },
     ])
   ],
   declarations: [
@@ -27,7 +33,9 @@ import {DialogModule} from 'primeng/dialog';
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
-    ProductComponent
+    ProductComponent,
+    CartComponent,
+    ShippingComponent
   ],
   bootstrap: [
     AppComponent
