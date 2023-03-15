@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { products } from '../products';
+import { DatabaseService } from '../database.service';
+import { Product } from '../products';
 
 @Component({
   selector: 'app-product-list',
@@ -9,7 +10,13 @@ import { products } from '../products';
 })
 export class ProductListComponent {
 
-  products = [...products];
+  products: Product [] = [];
+  constructor(private database:DatabaseService) {
+    this.database.getItems().subscribe(res => {
+      console.log(res);
+      this.products = res;
+    });
+  }
 
   share() {
     window.alert('El producto ha sido compartido!');
